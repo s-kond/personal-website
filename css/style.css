@@ -1,3 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+section {
+    background-color: #2f5cffcf;
+    color: white;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+header {
+    background-color: #2f5cffcf;
+    color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+
+header ul {
+    list-style: none;
+    text-align: right;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline;
+    padding-left: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline 3px white;
+    text-underline-offset: 8px;
+}
+
+.greeting {
+    background-color: transparent;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.greeting > img {
+    width: 40%;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, #DBF4FF, #2F5CFF);
+}
+
 h1 {
-    color: red;
+    display: inline;
+    vertical-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+}
+
+.container-skills {
+    display: flex;
+    width: 80%;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-skills section {
+    width: 40%;
+    margin: 0;
+    padding-left: 3rem;
+}
+
+.section-skill-list > ul, .section-learning-list > ul {
+    margin-left: 0;
+    padding: 0;
+}
+
+.section-skill-list > li, .section-learning-list > li {
+    margin-top: 5px;
+    padding: 0;
 }
