@@ -29,6 +29,8 @@ header {
 
 
 header ul {
+    display: inline-flex;
+    justify-content: flex-end;
     list-style: none;
     text-align: right;
     width: 60%;
@@ -37,7 +39,7 @@ header ul {
 }
 
 header li {
-    display: inline;
+   
     padding-left: 15px;
 }
 
@@ -75,15 +77,29 @@ h1 {
 .container-skills {
     display: flex;
     width: 80%;
+    height: 20rem;
     margin: 1rem auto;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 .container-skills section {
-    width: 40%;
+    width: 45%;
     margin: 0;
     padding-left: 3rem;
+}
+
+.section-skill {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+}
+
+.section-learning {
+    position: absolute;
+    top: 5rem;
+    right: 0;
 }
 
 .section-skill-list > ul, .section-learning-list > ul {
@@ -94,4 +110,19 @@ h1 {
 .section-skill-list > li, .section-learning-list > li {
     margin-top: 5px;
     padding: 0;
+}
+
+.contact-list {
+    width: 100%;
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-list > li {
+    color: white;
+    text-decoration: none;
 }
