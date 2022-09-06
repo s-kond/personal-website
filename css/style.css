@@ -40,7 +40,7 @@ header ul {
 
 header li {
    
-    padding-left: 15px;
+    padding-left: 35px;
 }
 
 header a {
@@ -54,17 +54,45 @@ a:hover {
 }
 
 .greeting {
+    position: relative;
     background-color: transparent;
+    width: 100%;
     color: black;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.greeting > div {
+    text-align: center;
 }
 
 .greeting > img {
     width: 40%;
     border-radius: 50%;
-    background-image: linear-gradient(to bottom right, #DBF4FF, #2F5CFF);
+    background-image: linear-gradient(to bottom right, white 0%, 90%, #2F5CFF);
+}
+
+.deco-box {
+    z-index: -5;
+    background-image: linear-gradient(to bottom right, white 0%, 80%, #2F5CFF);;
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 3em;
+    right: 18em;
+    border-radius: 50%;
+}
+
+.deco-box2 {
+    z-index: -5;
+    background-image: linear-gradient(to bottom right, white 0%, 80%, #2F5CFF);;
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 13em;
+    right: 6em;
+    border-radius: 50%;
 }
 
 h1 {
@@ -123,6 +151,15 @@ h1 {
 }
 
 .contact-list > li {
-    color: white;
+    text-align: center;
+}
+
+.contact-list img {
+    height: 3em;
+    width: 3em;
+}
+
+.contact-list a {
     text-decoration: none;
+    color: black;
 }
