@@ -1,7 +1,7 @@
 /* To-do: 
 - text-toggle
 - BEM
-- 
+- mobile first!!!
  */
 * {
     box-sizing: border-box;
@@ -14,32 +14,27 @@ body {
 }
 
 .grid-container {
-    display: grid;
-    grid-template-areas: "nav nav nav"
-    "profile x greeting"
-    "profile x learning"
-    "working x learning"
-    "working x about"
-    "projects x about"
-    "projects x contact"
-    "y x contact"
-    "footer footer footer" ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
     background-image: linear-gradient(to bottom right, white 0%, 70%, #2F5CFF);
     text-align: center;
-    width: 80%;
-    margin: 4rem auto;
+    margin: 2rem auto;
     padding: 5rem;
     border-radius: 50%;
 }
 
 header {
+    position: sticky;
+    z-index: 10;
     grid-area: nav;
     background-color: #2f5cffcf;
     color: white;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     padding: 1rem;
@@ -72,14 +67,17 @@ a:hover {
 }
 
 .profile-img {
+    margin-top: 2rem;
+    max-width: 600px; 
+    margin-bottom: 0;
     grid-area: profile;
     border-radius: 50%;
-    background-image: linear-gradient(to bottom right, white 0%, 90%, #2F5CFF);
+    background-image: linear-gradient(to bottom right, white 0%, 80%, #2F5CFF);
 }
 
 .greeting {
     grid-area: greeting;
-    margin-top: 10rem;
+    margin-top: 2rem;
     /* position: relative; */
     background-color: transparent;
     color: black;
@@ -169,6 +167,10 @@ h1 {
     grid-area: about;
 }
 
+.hidden {
+    display: none;
+} 
+
 .projects {
     grid-area: projects;
 }
@@ -177,7 +179,49 @@ h1 {
     grid-area: footer;
 }
 
-.placeholder {
+/* .placeholder {
     grid-area: x;
     width: 2vw;
-}
+} */
+
+@media only screen and (min-width: 900px) {
+    .grid-container {
+       display: grid;
+       grid-template-areas: 
+       "nav nav"
+       "profile greeting"
+       "profile learning"
+       "working learning"
+       "working about"
+       "projects about"
+       "projects contact"
+       "y contact"
+       "footer footer" ;
+   } 
+   .greeting {
+       margin-top: 10rem;
+   }
+
+   }
+
+   @media only screen and (min-width: 1400px) {
+    .grid-container {
+       display: grid;
+       grid-template-areas: 
+       "nav nav nav"
+       "working profile learning"
+       "projects greeting about"
+       "projects contact c"
+       "y contact c"
+       "footer footer footer" ;
+   } 
+   .greeting {
+    margin-top: 3rem;
+   }
+   .profile-img{
+    align-self: start;
+   } 
+   .section-learning {
+    align-self: start;
+   }
+   }
