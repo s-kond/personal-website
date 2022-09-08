@@ -1,3 +1,8 @@
+/* To-do: 
+- text-toggle
+- BEM
+- 
+ */
 * {
     box-sizing: border-box;
 }
@@ -8,16 +13,30 @@ body {
     font-size: 1.2rem;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-areas: "nav nav nav"
+    "profile x greeting"
+    "profile x learning"
+    "working x learning"
+    "working x about"
+    "projects x about"
+    "projects x contact"
+    "y x contact"
+    "footer footer footer" ;
+}
+
 section {
-    background-color: #2f5cffcf;
-    color: white;
+    background-image: linear-gradient(to bottom right, white 0%, 70%, #2F5CFF);
+    text-align: center;
     width: 80%;
-    margin: 1rem auto;
-    padding: 1rem;
-    border-radius: 30px;
+    margin: 4rem auto;
+    padding: 5rem;
+    border-radius: 50%;
 }
 
 header {
+    grid-area: nav;
     background-color: #2f5cffcf;
     color: white;
     display: inline-flex;
@@ -39,7 +58,6 @@ header ul {
 }
 
 header li {
-   
     padding-left: 35px;
 }
 
@@ -53,27 +71,26 @@ a:hover {
     text-underline-offset: 8px;
 }
 
+.profile-img {
+    grid-area: profile;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, white 0%, 90%, #2F5CFF);
+}
+
 .greeting {
-    position: relative;
+    grid-area: greeting;
+    margin-top: 10rem;
+    /* position: relative; */
     background-color: transparent;
-    width: 100%;
     color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .greeting > div {
     text-align: center;
 }
 
-.greeting > img {
-    width: 40%;
-    border-radius: 50%;
-    background-image: linear-gradient(to bottom right, white 0%, 90%, #2F5CFF);
-}
 
-.deco-box {
+/* .deco-box {
     z-index: -5;
     background-image: linear-gradient(to bottom right, white 0%, 80%, #2F5CFF);;
     width: 6em;
@@ -93,7 +110,7 @@ a:hover {
     top: 13em;
     right: 6em;
     border-radius: 50%;
-}
+} */
 
 h1 {
     display: inline;
@@ -102,32 +119,12 @@ h1 {
     font-family: monospace;
 }
 
-.container-skills {
-    display: flex;
-    width: 80%;
-    height: 20rem;
-    margin: 1rem auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-}
-
-.container-skills section {
-    width: 45%;
-    margin: 0;
-    padding-left: 3rem;
-}
-
 .section-skill {
-    position: absolute;
-    top: 2rem;
-    left: 0;
+    grid-area: working;
 }
 
 .section-learning {
-    position: absolute;
-    top: 5rem;
-    right: 0;
+    grid-area: learning;
 }
 
 .section-skill-list > ul, .section-learning-list > ul {
@@ -140,11 +137,15 @@ h1 {
     padding: 0;
 }
 
+.contact {
+    grid-area: contact;
+}
+
 .contact-list {
-    width: 100%;
     list-style: none;
     display: inline-flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 10px;
     margin: 0;
     padding: 0;
@@ -162,4 +163,21 @@ h1 {
 .contact-list a {
     text-decoration: none;
     color: black;
+}
+
+.about-me {
+    grid-area: about;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.placeholder {
+    grid-area: x;
+    width: 2vw;
 }
