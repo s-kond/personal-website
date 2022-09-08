@@ -1,0 +1,227 @@
+/* To-do: 
+- text-toggle
+- BEM
+- mobile first!!!
+ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    background-image: linear-gradient(to bottom right, white 0%, 70%, #2F5CFF);
+    text-align: center;
+    margin: 2rem auto;
+    padding: 5rem;
+    border-radius: 50%;
+}
+
+header {
+    position: sticky;
+    z-index: 10;
+    grid-area: nav;
+    background-color: #2f5cffcf;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+
+header ul {
+    display: inline-flex;
+    justify-content: flex-end;
+    list-style: none;
+    text-align: right;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    padding-left: 35px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline 3px white;
+    text-underline-offset: 8px;
+}
+
+.profile-img {
+    margin-top: 2rem;
+    max-width: 600px; 
+    margin-bottom: 0;
+    grid-area: profile;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, white 0%, 80%, #2F5CFF);
+}
+
+.greeting {
+    grid-area: greeting;
+    margin-top: 2rem;
+    /* position: relative; */
+    background-color: transparent;
+    color: black;
+}
+
+.greeting > div {
+    text-align: center;
+}
+
+
+/* .deco-box {
+    z-index: -5;
+    background-image: linear-gradient(to bottom right, white 0%, 80%, #2F5CFF);;
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 3em;
+    right: 18em;
+    border-radius: 50%;
+}
+
+.deco-box2 {
+    z-index: -5;
+    background-image: linear-gradient(to bottom right, white 0%, 80%, #2F5CFF);;
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    top: 13em;
+    right: 6em;
+    border-radius: 50%;
+} */
+
+h1 {
+    display: inline;
+    vertical-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+}
+
+.section-skill {
+    grid-area: working;
+}
+
+.section-learning {
+    grid-area: learning;
+}
+
+.section-skill-list > ul, .section-learning-list > ul {
+    margin-left: 0;
+    padding: 0;
+}
+
+.section-skill-list > li, .section-learning-list > li {
+    margin-top: 5px;
+    padding: 0;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.contact-list {
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-list > li {
+    text-align: center;
+}
+
+.contact-list img {
+    height: 3em;
+    width: 3em;
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.about-me {
+    grid-area: about;
+}
+
+.hidden {
+    display: none;
+} 
+
+.projects {
+    grid-area: projects;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* .placeholder {
+    grid-area: x;
+    width: 2vw;
+} */
+
+@media only screen and (min-width: 900px) {
+    .grid-container {
+       display: grid;
+       grid-template-areas: 
+       "nav nav"
+       "profile greeting"
+       "profile learning"
+       "working learning"
+       "working about"
+       "projects about"
+       "projects contact"
+       "y contact"
+       "footer footer" ;
+   } 
+   .greeting {
+       margin-top: 10rem;
+   }
+
+   }
+
+   @media only screen and (min-width: 1400px) {
+    .grid-container {
+       display: grid;
+       grid-template-areas: 
+       "nav nav nav"
+       "working profile learning"
+       "projects greeting about"
+       "projects contact c"
+       "y contact c"
+       "footer footer footer" ;
+   } 
+   .greeting {
+    margin-top: 3rem;
+   }
+   .profile-img{
+    align-self: start;
+   } 
+   .section-learning {
+    align-self: start;
+   }
+   }

@@ -4,59 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stefan Kondring</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="grid-container">
     <header>
         <div id="logo">Stefan Kondring</div>
-        <nav>
             <ul>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#about-me">More about me</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
     </header>
-    <main>
-        <hr>
-        <section>
-            <h1>Stefan Kondring</h1>
-            <img src="/images/Profil_Leiden3-removebg-preview.png" alt="profile-picture">
+    
+    <img class="profile-img" src="/images/Profil_Leiden3-removebg-preview.png" alt="profile-picture">
+        <section class="greeting">
+            <!-- <div class="deco-box"></div> -->
+            <h1>Hi, <br>I'm Stefan.</h1>
+            <p>webdeveloper | teacher</p>
+            <!-- <div class="deco-box2"></div> -->
         </section>
-        <hr>
-        <section id="skills">
-            <h2>Skills</h2>
-            <div>I work with:
-                <ul>
+        
+        <section id="skills" class="section-skill">
+            <h2>I work with:</h2>
+                <ul class="section-skill-list">
                     <li>Semantic HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                 </ul>
-            </div>
-            <div>I'm learning:
-                <ul>
+        </section>
+        <section class="section-learning">
+            <h2>I'm learning:</h2>
+                <ul class="section-learning-list">
                     <li>React</li>
                     <li>MongoDB</li>
+                    <li>...</li>
                 </ul>
-            </div>
         </section>
-        <hr>
-        <section id="about-me">
-            <h2>More about me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt ullam perferendis facilis nobis aperiam, ut eaque blanditiis quas reiciendis expedita, dignissimos natus aliquid. Distinctio culpa consectetur atque eum nihil.
-            Perferendis, officiis? Tempore non ut deleniti provident laboriosam dolores, culpa placeat alias. A delectus magni rerum laboriosam optio sapiente accusantium dignissimos officiis nam ullam. Vitae perferendis doloribus est odio nemo!
-            Voluptatum earum in dolore quasi. Aliquid dolorem dignissimos dicta blanditiis quod voluptatem nulla. Perspiciatis alias ullam magnam fuga delectus labore quibusdam quod tempore quasi tempora. Odio quos asperiores ratione nisi.</p>
+
+        <section class="projects">
+            <h2>Projects</h2>
         </section>
-        <hr>
-        <section id="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li><a href="https://github.com/s-kond">GitHub</a></li>
-                <li><a href="#">CodePen</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">XING</a></li>
+        
+        <section class="about-me" id="about-me">
+            <h2 data-js="toggle-btn">More about me</h2>
+            <p class="hidden" data-js="toggle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt ullam perferendis facilis nobis aperiam, ut eaque blanditiis quas reiciendis expedita, dignissimos natus aliquid. Distinctio culpa consectetur atque eum nihil.
+            Perferendis, officiis? A delectus magni rerum laboriosam optio sapiente accusantium dignissimos officiis nam ullam. Vitae perferendis doloribus est odio nemo!
+            </p>
+        </section>
+        
+        <section class="contact" id="contact">
+            <ul class="contact-list">
+                <li><a href="https://github.com/s-kond"><img src="./images/github.svg" alt="Github-Link"><br>GitHub</a></li>
+                <li><a href="https://codepen.io/s-kond"><img src="./images/codepen.svg" alt="Codepen-Link"><br>CodePen</a></li>
+                <li><a href="#"><img src="./images/linkedin.svg" alt="Linkedin-Link"><br>LinkedIn</a></li>
+                <li><a href="#"><img src="./images/xing.svg" alt="Xing-Link"><br>XING</a></li>
             </ul>
         </section>
-    </main>
+        <section class="footer">
+            <h3>Impressum</h3>
+        </section>
+        <div class="placeholder"></div>
+</div>
+<script src="app.js" defer></script>
 </body>
 </html>
