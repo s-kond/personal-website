@@ -1,5 +1,6 @@
 header {
-    position: sticky;
+    position: fixed;
+    top: 0;
     z-index: 10;
     grid-area: nav;
     background-color: #2f5cffcf;
@@ -13,7 +14,7 @@ header {
 }
 
 
-header ul {
+.header__horizontal-nav {
     display: inline-flex;
     justify-content: flex-end;
     list-style: none;
@@ -21,6 +22,19 @@ header ul {
     width: 60%;
     margin: 0;
     padding: 0;
+}
+
+.header__vertical-nav {
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  list-style: none;
+  text-align: right;
+}
+
+.header__vertical-nav a {
+  text-decoration: none;
+  color: black;
 }
 
 header li {
@@ -120,3 +134,20 @@ a:hover {
     transform: rotate(-45deg);
     transition-delay: 100ms;
   }
+
+.header__nav-icon-hidden {
+    display: none;
+}
+
+.header__vertical-nav-hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header__horizontal-nav-hidden {
+    display: none;
+  }
+  .header__nav-icon-hidden {
+    display: unset;
+  }
+}
