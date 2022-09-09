@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stefan Kondring</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="grid-container">
     <header>
         <div id="logo">Stefan Kondring</div>
-            <ul>
+            <ul class="header__horizontal-nav header__horizontal-nav-hidden">
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#about-me">More about me</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="icon nav-icon header__nav-icon-hidden" data-js="header__nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
     </header>
+    <ul class="header__vertical-nav header__vertical-nav-hidden" data-js="vertical-nav">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about-me">More about me</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
     
     <img class="profile-img" src="/images/Profil_Leiden3-removebg-preview.png" alt="profile-picture">
         <section class="greeting">
@@ -44,18 +54,20 @@
         </section>
 
         <section class="projects">
-            <h2>Projects</h2>
+            <h2 class="h2_interactive" data-js="toggle-btn-projects">Projects</h2>
+            <a href="https://quiz-app-s-kond.vercel.app" class="hidden" data-js="toggle-text-projects">QuizApp</a>
         </section>
         
         <section class="about-me" id="about-me">
-            <h2 data-js="toggle-btn">More about me</h2>
-            <p class="hidden" data-js="toggle-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt ullam perferendis facilis nobis aperiam, ut eaque blanditiis quas reiciendis expedita, dignissimos natus aliquid. Distinctio culpa consectetur atque eum nihil.
+            <h2 class="h2_interactive" data-js="toggle-btn-about">More about me</h2>
+            <p class="hidden" data-js="toggle-text-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt ullam perferendis facilis nobis aperiam, ut eaque blanditiis quas reiciendis expedita, dignissimos natus aliquid. Distinctio culpa consectetur atque eum nihil.
             Perferendis, officiis? A delectus magni rerum laboriosam optio sapiente accusantium dignissimos officiis nam ullam. Vitae perferendis doloribus est odio nemo!
             </p>
         </section>
         
         <section class="contact" id="contact">
-            <ul class="contact-list">
+            <h2 class="h2_interactive" data-js="toggle-btn-contact">Contact</h2>
+            <ul class="contact-list hidden" data-js="toggle-text-contact">
                 <li><a href="https://github.com/s-kond"><img src="./images/github.svg" alt="Github-Link"><br>GitHub</a></li>
                 <li><a href="https://codepen.io/s-kond"><img src="./images/codepen.svg" alt="Codepen-Link"><br>CodePen</a></li>
                 <li><a href="#"><img src="./images/linkedin.svg" alt="Linkedin-Link"><br>LinkedIn</a></li>

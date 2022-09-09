@@ -1,0 +1,19 @@
+@import url(./components/header.css);
+@import url(./components/main.css);
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+/* To-do: 
+- text-toggle
+- BEM
+- mobile first!!!
+ */
