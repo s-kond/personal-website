@@ -6,14 +6,21 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: monospace;
-    font-size: 1.2rem;
+:root {
+    /*  primary: #2F5CFF 
+        secondary: white*/
+    --primary-color: #2F5CFF;
+    --secondary-color: #FFF;
+
+    --primary-color-transparent: #2f5cffcf;
 }
 
-/* To-do: 
-- text-toggle
-- BEM
-- mobile first!!!
- */
+
+
+body {
+    margin: 0;
+    padding-top: 40px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    background-color: rgb(222, 235, 237);
+}
