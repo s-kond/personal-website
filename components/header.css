@@ -3,7 +3,7 @@ header {
     top: 0;
     z-index: 10;
     grid-area: nav;
-    background-color: #2f5cffcf;
+    background-color: var(--primary-color-transparent);
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +43,7 @@ header li {
 
 header a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
 a:hover {
