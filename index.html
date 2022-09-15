@@ -30,43 +30,54 @@
     
     <img class="profile-img" src="/images/Profil_Leiden3-removebg-preview.png" alt="profile-picture">
         <section class="greeting">
-            <!-- <div class="deco-box"></div> -->
-            <h1>Hi, <br>I'm Stefan.</h1>
+            <h1>Hi, I'm Stefan.</h1>
             <p>webdeveloper | teacher</p>
             <!-- <div class="deco-box2"></div> -->
         </section>
         
-        <section id="skills" class="section-skill">
-            <h2>I work with:</h2>
-                <ul class="section-skill-list">
+        <section id="skills" class="skills">
+            <h2 class="h2_interactive" data-js="toggle-btn-skills">Skills</h2>
+            <div class="hidden" data-js="toggle-text-skills">
+            <h3 data-js="toggle-text-skills">I work with:</h3>
+                <ul>
                     <li>Semantic HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                 </ul>
-        </section>
-        <section class="section-learning">
-            <h2>I'm learning:</h2>
-                <ul class="section-learning-list">
+            <h3>I'm learning:</h3>
+                <ul>
                     <li>React</li>
                     <li>MongoDB</li>
                     <li>...</li>
                 </ul>
+            </div>
         </section>
 
         <section class="projects">
             <h2 class="h2_interactive" data-js="toggle-btn-projects">Projects</h2>
-            <a href="https://quiz-app-s-kond.vercel.app" class="hidden" data-js="toggle-text-projects">QuizApp</a>
+            <div class="projects__card hidden" data-js="toggle-text-projects"><a href="https://quiz-app-s-kond.vercel.app">QuizApp</a>
+            </div>
         </section>
         
         <section class="about-me" id="about-me">
             <h2 class="h2_interactive" data-js="toggle-btn-about">More about me</h2>
-            <p class="hidden" data-js="toggle-text-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt ullam perferendis facilis nobis aperiam, ut eaque blanditiis quas reiciendis expedita, dignissimos natus aliquid. Distinctio culpa consectetur atque eum nihil.
-            Perferendis, officiis? A delectus magni rerum laboriosam optio sapiente accusantium dignissimos officiis nam ullam. Vitae perferendis doloribus est odio nemo!
-            </p>
+            <div class="hidden" data-js="toggle-text-about">
+            <p>Während meiner Zeit als Informatiklehrer an einer Realschule (fachfremd; studiert habe ich eigentlich Latein und Geschichte), ist meine Begeisterung fürs Programmieren immer weiter gewachsen. Da ich außerdem bereits länger über einen Berufswechsel nachgedacht hatte, habe ich letztlich den Absprung gewagt. </p>
+            <p> Erste Grundlagen in HTML, CSS und JS hatte ich mir mithilfe von Online-Tutorials und eines udemy-Kurses bereits selbst beigebracht, bevor ich im August 2022 ins Web Dev Bootcamp von neueFische gestartet bin. </p>
+            <p> Jetzt suche ich ab Dezember 2022 nach einer Stelle als Junior-Frontend-Entwickler - in einem Team, das ich unterstützen und von dem ich weiter lernen kann. 
+        </p>
+    </div>
         </section>
         
         <section class="contact" id="contact">
             <h2 class="h2_interactive" data-js="toggle-btn-contact">Contact</h2>
+            <form action="" class="contact-form hidden" data-js="toggle-text-contact2">
+                <label for="user-email-address">Enter your email address and your message. I'll answer you as soon as I can:</label>
+                <input type="email" id="user-email-address" placeholder="max@mustermann.com">
+                <label for="user-message"></label>
+                <textarea name="user-message" id="user-message" cols="30" rows="5" placeholder="Hi Stefan, nice to meet you! ..."></textarea>
+                <button type="button">Send</button>
+            </form>
             <ul class="contact-list hidden" data-js="toggle-text-contact">
                 <li><a href="https://github.com/s-kond"><img src="./images/github.svg" alt="Github-Link"><br>GitHub</a></li>
                 <li><a href="https://codepen.io/s-kond"><img src="./images/codepen.svg" alt="Codepen-Link"><br>CodePen</a></li>
@@ -74,6 +85,9 @@
                 <li><a href="#"><img src="./images/xing.svg" alt="Xing-Link"><br>XING</a></li>
             </ul>
         </section>
+        <!-- <div class="deco-container">
+            <div class="deco-box"></div>
+        </div> -->
         <section class="footer">
             <h3>Impressum</h3>
         </section>
