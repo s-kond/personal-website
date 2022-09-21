@@ -16,7 +16,7 @@ section {
 
 .profile-img {
     margin-top: 4rem;
-    max-width: 800px; 
+    width: 80vw; 
     margin-bottom: 0;
     grid-area: profile;
     justify-self: center;
@@ -109,6 +109,12 @@ h1 {
 .h2_interactive:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+@media only screen and (min-width: 550px) {
+    .profile-img {
+        max-width: 500px;
+    }
 }
 
 @media only screen and (min-width: 900px) {
